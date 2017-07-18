@@ -1,5 +1,15 @@
 ### 실용주의 머신러닝 스터디 3
 
+### [중급] Tensorflow 유닛테스트 하나 작성해보기
+- https://stackoverflow.com/…/34204…/run-tensorflow-unit-tests
+
+### [초급] Tensorflow Linear Regression 튜토리얼 따라하기
+- https://cpuu.postype.com/post/161789
+
+
+### [상급] LSTM 혹은 어느 알고리즘이든 비트코인 시계열 예측 구현하기
+- https://www.facebook.com/groups/634363263421303/664340533756909/ 
+
 - 비트코인 RAW 데이터 : bitcoin_ticker.csv
 - 학습 및 테스트용 데이터 : korbit_btckrw.csv(bitcoin_ticker.csv 에서 korbit, btckrw 만 필터링 된 데이터)
 

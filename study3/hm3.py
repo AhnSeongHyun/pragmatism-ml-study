@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 import tensorflow as tf
 import numpy as np
 
@@ -19,6 +20,9 @@ iterations = 100
 
 # Open, High, Low, Volume, Close
 xy = np.genfromtxt('data/korbit_btckrw.csv', delimiter=',', dtype='float')[1:][:, [4,5,6,7,8,9,10,11]]
+ori_x = xy
+ori_y = xy[:, [0]]  # Close as label
+
 xy = MinMaxScaler(xy)
 x = xy
 y = xy[:, [0]]  # Close as label
@@ -77,7 +81,6 @@ with tf.Session() as sess:
     rmse_val = sess.run(rmse, feed_dict={
         targets: testY, predictions: test_predict})
     print("RMSE: {}".format(rmse_val))
-
 
 print("compare:")
 for i in range(100):
