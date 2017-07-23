@@ -11,7 +11,7 @@ def MinMaxScaler(data):
 
 
 # train Parameters
-seq_length = 7
+seq_length = 30
 data_dim = 8
 hidden_dim = 10
 output_dim = 1
@@ -29,7 +29,7 @@ y = xy[:, [0]]  # Close as label
 print(x[0])
 print(y[0])
 
-# build a dataset
+# build a datasetv
 dataX = []
 dataY = []
 for i in range(0, len(y) - seq_length):
@@ -52,7 +52,7 @@ X = tf.placeholder(tf.float32, [None, seq_length, data_dim])
 Y = tf.placeholder(tf.float32, [None, 1])
 
 # build a LSTM network
-cell = tf.contrib.rnn.BasicLSTMCell(num_units=hidden_dim, state_is_tuple=True, activation=tf.nn.relu)
+cell = tf.contrib.rnn.BasicLSTMCell(num_units=hidden_dim, state_is_tuple=True, activation=tf.nn.relu6)
 outputs, _states = tf.nn.dynamic_rnn(cell, X, dtype=tf.float32)
 Y_pred = tf.contrib.layers.fully_connected(outputs[:, -1], output_dim, activation_fn=None)
 
@@ -74,14 +74,9 @@ with tf.Session() as sess:
     # Training step
     for i in range(iterations):
         _, step_loss = sess.run([train, loss], feed_dict={X: trainX, Y: trainY})
-        #print("[step: {}] loss: {}".format(i, step_loss))
+        print("[step: {}] loss: {}".format(i, step_loss))
     #
     # Test step
     test_predict = sess.run(Y_pred, feed_dict={X: testX})
-    rmse_val = sess.run(rmse, feed_dict={
-        targets: testY, predictions: test_predict})
+    rmse_val = sess.run(rmse, feed_dict={targets: testY, predictions: test_predict})
     print("RMSE: {}".format(rmse_val))
-
-print("compare:")
-for i in range(100):
-    print(str(testY[i]) + "=>" + str(test_predict[i]))
