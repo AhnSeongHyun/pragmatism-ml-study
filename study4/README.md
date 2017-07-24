@@ -28,7 +28,7 @@ for step in range(epoch):
         writer.add_summary(summary, step)
 ```
 
-![linear-tensorboard](./images/linear-tensorboard.png)
+![linear-tensorboard](./images/linear_tensorboard.png)
 ### MNIST tensorboard 를 이용한 튜닝
 
 - Activation Function | Learning Rate
@@ -37,5 +37,5 @@ for step in range(epoch):
     - mnist_<class 'tensorflow.python.training.gradient_descent.GradientDescentOptimizer'>_0.001_100
     - mnist_<class 'tensorflow.python.training.gradient_descent.GradientDescentOptimizer'>_0.01_100
     
-![cnn-tensorboard](./cnn/linear-tensorboard.png)
+![cnn-tensorboard](./images/cnn_tensorboard.png)
    
