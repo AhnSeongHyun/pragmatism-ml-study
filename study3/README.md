@@ -6,7 +6,6 @@
 ### [초급] Tensorflow Linear Regression 튜토리얼 따라하기
 - https://cpuu.postype.com/post/161789
 
-
 ### [상급] LSTM 혹은 어느 알고리즘이든 비트코인 시계열 예측 구현하기
 - https://www.facebook.com/groups/634363263421303/664340533756909/ 
 
