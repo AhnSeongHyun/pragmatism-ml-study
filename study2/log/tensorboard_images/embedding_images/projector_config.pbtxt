@@ -1,0 +1,9 @@
+embeddings {
+  tensor_name: "test_embedding:0"
+  metadata_path: "/Users/anseonghyun/workspace/minst_cnn_tensorboard/labels_1024.tsv"
+  sprite {
+    image_path: "/Users/anseonghyun/workspace/minst_cnn_tensorboard/sprite_1024.png"
+    single_image_dim: 28
+    single_image_dim: 28
+  }
+}

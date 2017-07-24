@@ -1,0 +1,4 @@
+embeddings {
+  tensor_name: "test_embedding:0"
+  metadata_path: "/Users/anseonghyun/workspace/minst_cnn_tensorboard/labels_1024.tsv"
+}
