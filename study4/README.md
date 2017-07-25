@@ -38,4 +38,52 @@ for step in range(epoch):
     - mnist_<class 'tensorflow.python.training.gradient_descent.GradientDescentOptimizer'>_0.01_100
     
 ![cnn-tensorboard](./images/cnn_tensorboard.png)
-   
+
+----
+스터디 모임(7/25)
+=================
+
+- 여러가지 이미지 넷 
+    - VGGNET
+    - GOOGLENET
+    - INCEPTION ResNet
+
+
+- 오버피팅(Overfitting)의 경우 accuracy가 올라가다가 내려간다.
+- train, test, validation 각각 그리고 판별하자. 
+
+- 근본적인 질문 : accuracy 와 loss(cost)를 보고 어떻게 overfitting, underfitting 을 판단할것인가?
+
+
+- 튜닝과 모델, 뭐가 안맞나?
+  - 모델 : 모델이 검증된것을 쓰면 튜닝을 손본다.
+  - 둘중에 하나는 픽스를 해야한다. 
+
+- 잘 만들어 진것을 쓰자.
+ 
+---
+RNA 서열과 단백질 결합 <최대식>
+
+---
+
+**Classification 모델의 평가기준 4가지** 
+- tt, tp, fn tn 
+- Gold Standard
+
+
+**시계열 예측의 평가 기준** 
+- accuracy 가 아닌 다른 기준이 필요 
+- MAE
+- RMSE(ROOT MEAN SQUARED ERROR)
+    - 예측 값과 실측값이 차이의 제곱의 평균값의 루트값
+    - 문제 : 크기 의존적 에러 (Scale-dependent errors) : 기준 가격이 달라서 오차 비교가 어렵다 
+        
+- 비율에러 : MAPE(값이 1과 0값이 작으면 모델이 망가짐)
+    - RSME : 10, MAPE = 12/10
+    
+- 크기의존적 에러 보다는 비율에러를 쓰는게 낮다 
+- 크기 조정된 에러(Scaled errors)
+- 참고 : https://www.otexts.org/fpp/2/5
+- Arima : http://www.dodomira.com/2016/04/21/arima_in_r/
+
+- 비슷한 종류의 데이터끼리 나눠서 트레이닝 하는게 좋다. (게임사의 주식 모델, 제약회사의 주식 모델 )
