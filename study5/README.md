@@ -9,5 +9,12 @@
 
 3) Facebook Prophet API로 비트코인 예측하기
 - https://facebookincubator.github.io/prophet/docs/quick_start.html#python-api
-
------
+  
+- [prophet_quickstart.py](prophet_quickstart.py)
+- [prophet_forecast_growth.py](prophet_forecast_growth.py)
+- `m.plot()` 으로 그래프 출력 안될때 
+   ```python
+   from matplotlib import pyplot as plt
+   plt.show()
+   ```
+   
