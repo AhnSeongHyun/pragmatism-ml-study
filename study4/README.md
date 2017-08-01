@@ -87,3 +87,8 @@ RNA 서열과 단백질 결합 <최대식>
 - Arima : http://www.dodomira.com/2016/04/21/arima_in_r/
 
 - 비슷한 종류의 데이터끼리 나눠서 트레이닝 하는게 좋다. (게임사의 주식 모델, 제약회사의 주식 모델 )
+
+
+
+[머신러닝 분류 문제의 세부 수치 in Tensorflow
+](https://dschoiblog.wordpress.com/2017/08/01/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EB%B6%84%EB%A5%98-%EB%AC%B8%EC%A0%9C%EC%9D%98-%EC%84%B8%EB%B6%80-%EC%88%98%EC%B9%98-in-tensorflow/)
